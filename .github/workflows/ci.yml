@@ -53,7 +53,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'count-pwa' }} --branch=${{ github.head_ref || github.ref_name }}
       - if: github.event_name == 'pull_request'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             await github.rest.issues.createComment({
