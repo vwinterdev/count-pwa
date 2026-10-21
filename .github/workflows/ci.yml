@@ -39,7 +39,7 @@ jobs:
       name: production
       url: https://count-pwa.vwinterdev.workers.dev
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
